@@ -8,7 +8,7 @@ Win + R -\> RDP -\> Local Resources -\> Check drives
 
 <img src="docs/images/image.png" style="width:4.58373in;height:4.95876in" />
 
-<img src="media/image2.png" style="width:4.48372in;height:3.85033in" />
+<img src="docs/images/image2.png" style="width:4.48372in;height:3.85033in" />
 
 1.  Windows VM
 
@@ -22,7 +22,7 @@ winget install --exact --id Microsoft.AzureCLI
 
 az version
 
-<img src="media/image3.png" style="width:6.15053in;height:1.52513in" />
+<img src="docs/images/image3.png" style="width:6.15053in;height:1.52513in" />
 
 5.  Login to Azure
 
@@ -32,7 +32,7 @@ az login
 
 winget install --exact --id Hashicorp.Terraform
 
-<img src="media/image4.png" style="width:6.26042in;height:2.3125in" />
+<img src="docs/images/image4.png" style="width:6.26042in;height:2.3125in" />
 
 7.  Verify you are connected to the correct Azure subscription.
 
@@ -100,11 +100,11 @@ terraform validate
 
 terraform plan ----\> What terraform will do??
 
-<img src="media/image5.png" style="width:6.26042in;height:3.01042in" />
+<img src="docs/images/image5.png" style="width:6.26042in;height:3.01042in" />
 
 terraform apply:
 
-<img src="media/image6.png" style="width:6.26042in;height:2.02083in" />
+<img src="docs/images/image6.png" style="width:6.26042in;height:2.02083in" />
 
 Now, you will see another file --\> terraform.tfstate
 
@@ -126,7 +126,7 @@ Azure
 
 Actual infrastructure
 
-<img src="media/image7.png" style="width:6.26042in;height:2.28125in" />
+<img src="docs/images/image7.png" style="width:6.26042in;height:2.28125in" />
 
 See, what terraform knows:
 
@@ -136,11 +136,11 @@ terraform state list:
 
 terraform state show azurerm_resource_group.demo
 
-<img src="media/image8.png" style="width:6.26042in;height:1.3125in" />
+<img src="docs/images/image8.png" style="width:6.26042in;height:1.3125in" />
 
 terraform plan
 
-<img src="media/image9.png" style="width:6.26042in;height:0.63542in" />
+<img src="docs/images/image9.png" style="width:6.26042in;height:0.63542in" />
 
 Now, add these two blocks in the main.tf.
 
@@ -174,15 +174,15 @@ terraform validate
 
 terrafrom plan
 
-<img src="media/imagea.png" style="width:6.26042in;height:3.30208in" />
+<img src="docs/images/imagea.png" style="width:6.26042in;height:3.30208in" />
 
 terraform apply
 
-<img src="media/imageb.png" style="width:6.26042in;height:2.90625in" />
+<img src="docs/images/imageb.png" style="width:6.26042in;height:2.90625in" />
 
 Confirm there are no changes.
 
-<img src="media/imagec.png" style="width:6.26042in;height:0.97917in" />
+<img src="docs/images/imagec.png" style="width:6.26042in;height:0.97917in" />
 
 **What's the idea?**
 
@@ -341,7 +341,7 @@ into state.
 
 Now, you can clearly see the outputs.
 
-<img src="media/imaged.png" style="width:6.26042in;height:2.98958in" />
+<img src="docs/images/imaged.png" style="width:6.26042in;height:2.98958in" />
 
 Output.tf is basically creating a **named, convenient way to retrieve
 important Terraform values**.
@@ -550,7 +550,7 @@ Run:
 
 az storage account list --output table
 
-<img src="media/imagee.png" style="width:6.26042in;height:1.01042in" />
+<img src="docs/images/imagee.png" style="width:6.26042in;height:1.01042in" />
 
 Perfect. 👍 This tells us you **already have one Storage Account**, but
 it belongs to the Azure Cloud Shell infrastructure:
@@ -591,7 +591,7 @@ Azure\
 └── tfstate container\
 └── terraform.tfstate
 
-<img src="media/imagef.png" style="width:6.26042in;height:1.40625in" />
+<img src="docs/images/imagef.png" style="width:6.26042in;height:1.40625in" />
 
 **Step 3 — Create the Storage Account**
 
@@ -705,7 +705,7 @@ This is a very important command in this exercise, because Terraform
 will detect that you're moving from local state to an Azure remote
 backend.
 
-<img src="media/image10.png" style="width:6.26042in;height:3.20833in" />
+<img src="docs/images/image10.png" style="width:6.26042in;height:3.20833in" />
 
 The real verification is to see the Azure Storage:
 
@@ -714,25 +714,25 @@ tfstate --auth-mode login --output table
 
 Not working : --\> Permission issue
 
-<img src="media/image11.png" style="width:6.26042in;height:1.57292in" />
+<img src="docs/images/image11.png" style="width:6.26042in;height:1.57292in" />
 
 --\> terraform plan
 
-<img src="media/image12.png" style="width:6.26042in;height:1.26042in" />
+<img src="docs/images/image12.png" style="width:6.26042in;height:1.26042in" />
 
 --\> terraform state list
 
-<img src="media/image13.png" style="width:6.16667in;height:1in" />
+<img src="docs/images/image13.png" style="width:6.16667in;height:1in" />
 
 --\> terraform state pull
 
 It is giving the json output.
 
-<img src="media/image14.png" style="width:6.26042in;height:3.20833in" />
+<img src="docs/images/image14.png" style="width:6.26042in;height:3.20833in" />
 
 Verify the backend configuration on Azure Portal as well.
 
-<img src="media/image15.png" style="width:6.26042in;height:2.02083in" />
+<img src="docs/images/image15.png" style="width:6.26042in;height:2.02083in" />
 
 **----\>\< State locking test... -----\>**
 
@@ -808,7 +808,7 @@ lock first.
 
 terraform apply -lock-timeout=60s
 
-<img src="media/image16.png" style="width:6.26042in;height:2.08333in" />
+<img src="docs/images/image16.png" style="width:6.26042in;height:2.08333in" />
 
 **On windows 2:**
 
@@ -816,7 +816,7 @@ Run
 
 terraform apply -lock-timeout=10s
 
-<img src="media/image17.png" style="width:6.26042in;height:2.88542in" />
+<img src="docs/images/image17.png" style="width:6.26042in;height:2.88542in" />
 
 ---\> Complete terraform flow:
 
@@ -1468,5 +1468,6 @@ C:\terraform-azure-aks\
 After running those commands, check it with:
 
 Get-ChildItem C:\terraform-azure-aks -Recurse
+
 
 
