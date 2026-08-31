@@ -6,7 +6,7 @@ Win + R -\> RDP -\> Local Resources -\> Check drives
 
 2.  Now, you can copy any file on your Windows to your windows VM.
 
-<img src="media/image.png" style="width:4.58373in;height:4.95876in" />
+<img src="docs/images/image.png" style="width:4.58373in;height:4.95876in" />
 
 <img src="media/image2.png" style="width:4.48372in;height:3.85033in" />
 
